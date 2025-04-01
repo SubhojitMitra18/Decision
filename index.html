@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shocking Announcement!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #000;
+            color: #fff;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        #message {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff0000;
+            animation: pulse 1s infinite alternate;
+        }
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        #reveal {
+            display: none;
+            font-size: 32px;
+            color: #00ff00;
+            font-weight: bold;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚨 Breaking News 🚨</h1>
+    <p id="message">I have made the toughest decision of my life... I am retiring from teaching forever. 😢</p>
+    <p id="reveal">🎉 GOTCHA! Happy April Fool’s Day! I’m not going anywhere! 😆🎉</p>
+    <audio id="prankSound" class="hidden" src="https://www.myinstants.com/media/sounds/troll-song.mp3" autoplay></audio>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById('message').style.display = 'none';
+            document.getElementById('reveal').style.display = 'block';
+            document.getElementById('prankSound').play();
+        }, 4000);
+    </script>
+</body>
+</html>
